@@ -1,4 +1,4 @@
-Hi i am Matk Justine Bengzon 
+Hi i am Mark Justine Bengzon 
 
 I created a simple weather app using HTML, CSS, JavaScript and OpenWeatherMap API.
 
