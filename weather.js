@@ -1,20 +1,18 @@
 // Define an object 'api' that holds the API key and base URL for the OpenWeatherMap API.
 const api = {
-  key: "baedc2f2f31b7b3303e5d42d88d283c3",
-  base: "https://api.openweathermap.org/data/2.5/",
+    key: "baedc2f2f31b7b3303e5d42d88d283c3",
+    base: "https://api.openweathermap.org/data/2.5/",
 };
 
 // Get the search box element and add an event listener for keypress events.
-const searchbox = document.querySelector(".search-box");
+const searchbox = document.querySelector(".search-city");
 searchbox.addEventListener("keypress", setQuery);
 
 // This function is called when a key is pressed in the search box.
 function setQuery(evt) {
-  // Check if the key pressed is Enter (key code 13).
-  if (evt.keyCode == 13) {
-    // Call the 'getResults' function with the value in the search box as the query.
-    getResults(searchbox.value);
-  }
+    if (evt.keyCode == 13) {
+        getResults(searchbox.value);
+    }
 }
 
 // This function makes a request to the OpenWeatherMap API and fetches weather data based on the query.

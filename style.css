@@ -14,58 +14,132 @@ body {
 }
 
 .clear-background {
-  background-image: url('img/clear.jpg');
-  background-size: cover;
-  background-position: top center;
+    background-image: url('img/clear.jpg');
+    background-size: cover;
+    background-position: top center;
 }
 
 .cloudy-background {
-  background-image: url('img/cloudy.jpg');
-  background-size: cover;
-  background-position: top center;
+    background-image: url('img/cloudy.jpg');
+    background-size: cover;
+    background-position: top center;
 }
 
 .rainy-background {
-  background-image: url('img/rain.jpg');
+    background-image: url('img/rain.jpg');
 }
 
 .snow-background {
-  background-image: url('img/snow.jpg');
-  background-size: cover;
-  background-position: top center;
+    background-image: url('img/snow.jpg');
+    background-size: cover;
+    background-position: top center;
 }
-
-
-
 
 .app-wrap {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 8%;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
 }
 
 header {
     display: flex;
     justify-content: center;
-    align-items:  center;
+    align-items: center;
     padding: 50px 15px 15px;
 }
 
-header input {
-    width: 100%;
-    max-width: 280px;
-    padding: 10px 15px;
-    border: none;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 16px 0px 16px 0px;
-    border-bottom: 3px solid #0E21A0;
+.search-box {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-header input:focus {
-    background-color: rgba(255, 255, 255, 0.6);
+.search-box.active {
+  width: 350px;
 }
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  outline: none;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box input.active {
+  opacity: 1;
+}
+
+.search-box input::placeholder {
+  color: #a6a6a6;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 22px;
+  color: #EE9322;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box .search-icon.active {
+  right: 5px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background: #EE9322;
+  color: #fff;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .cancel-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box .cancel-icon.active {
+  right: -40px;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .search-data {
+  text-align: center;
+  padding-top: 7px;
+  color: #fff;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.search-box .search-data.active {
+  display: none;
+} 
 
 main {
     flex: 1 1 100%;
@@ -74,44 +148,45 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-  
-  .location .city {
+}
+
+.location .city {
     color: #FFF;
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 500;
     margin-bottom: 5px;
-  }
-  
-  .location .date {
+}
+
+.location .date {
     color: #FFF;
-    font-size: 16px;
-  }
-  
-  .current .temp {
+    font-size: 18px;
+}
+
+.current .temp {
     color: #FFF;
     font-size: 102px;
     font-weight: 900;
     margin: 30px 0px;
-    text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
-  }
-  
-  .current .temp span {
+    text-shadow: 2px 10px rgba(241, 163, 7, 0.6);
+}
+
+.current .temp span {
     font-weight: 500;
-  }
-  
-  .current .weather {
+}
+
+.current .weather {
     color: #FFF;
     font-size: 32px;
     font-weight: 700;
     font-style: italic;
     margin-bottom: 15px;
     text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
-  }
-  
-  .current .hi-low {
+}
+
+.current .hi-low {
     color: #FFF;
     font-size: 24px;
     font-weight: 500;
     text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
-  }
+}
+
