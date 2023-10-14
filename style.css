@@ -8,10 +8,35 @@
 
 body {
     font-family: 'Space Grotesk';
-    background-image: url('bg.jpg');
+    background-image: url('img/bg.jpg');
     background-size: cover;
     background-position: top center;
 }
+
+.clear-background {
+  background-image: url('img/clear.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.cloudy-background {
+  background-image: url('img/cloudy.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.rainy-background {
+  background-image: url('img/rain.jpg');
+}
+
+.snow-background {
+  background-image: url('img/snow.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+
+
 
 .app-wrap {
     display: flex;
@@ -35,7 +60,7 @@ header input {
     outline: none;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 16px 0px 16px 0px;
-    border-bottom: 3px solid #DF8E00;
+    border-bottom: 3px solid #0E21A0;
 }
 
 header input:focus {
